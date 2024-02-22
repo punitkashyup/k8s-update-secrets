@@ -1,0 +1,13 @@
+{
+    "name": "update-k8s-secret-action",
+    "version": "1.0.0",
+    "description": "GitHub Action to update a secret in a Kubernetes cluster",
+    "main": "index.js",
+    "author": "Punit Kashyap",
+    "license": "MIT",
+    "dependencies": {
+        "@kubernetes/client-node": "^0.20.0",
+        "dotenv": "^16.4.5",
+        "winston": "^3.11.0"
+    }
+}
