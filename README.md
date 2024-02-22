@@ -53,7 +53,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Update Kubernetes Secret
-      uses: your-username/k8s-secret-update-action@v1
+      uses: punitkashyup/k8s-secret-update-action@v1
       with:
         namespace: ${{ secrets.NAMESPACE }}
         secret_name: ${{ secrets.SECRET_NAME }}

@@ -4,11 +4,19 @@ author: 'Punit kashyap'
 branding:
   icon: 'settings'
   color: 'blue'
-
-outputs:
-  message:
-    description: 'Confirmation message after updating the secret value'
-
+inputs:
+  namespace:
+    description: 'Namespace where the secret exists'
+    required: true
+  secret_name:
+    description: 'Name of the secret to be updated'
+    required: true
+  key:
+    description: 'Key of the value in the secret to be updated'
+    required: true
+  new_value:
+    description: 'New value to be set'
+    required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node16'
+  main: 'update-secret.js'
